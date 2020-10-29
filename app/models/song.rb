@@ -4,7 +4,6 @@ class Song < ApplicationRecord
   validates :released, inclusion: { in: [true, false] }
   validates :release_year, presence: true, if: :released
   validates :release_year, numericality: { less_than_or_equal_to: Time.now.year }, allow_nil: true
-  #   - Must be less than or equal to the current year
   validates :artist_name, presence: true
 
   def unique_song?

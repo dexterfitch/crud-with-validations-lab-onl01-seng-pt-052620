@@ -2,7 +2,7 @@
 <table>
   <tbody>
     <% @songs.each do |song| %>
-      <tr></tr>
+      <tr><%= link_to song.name, song_path(song) %></tr>
     <% end %>
   </tbody>
 </table>
